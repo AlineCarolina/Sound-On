@@ -25,14 +25,15 @@ class Login extends React.Component {
   }
 
   botaoEnviar() {
-    createUser();
+    const { textoInput } = this.state;
+    createUser({ name: textoInput });
   }
 
   render() {
     const { textoInput } = this.state;
     return (
       <div data-testid="page-login">
-        <form>
+        <form onSubmit={ this.botaoEnviar }>
           <label htmlFor="login">
             Nome
             <input
@@ -45,7 +46,6 @@ class Login extends React.Component {
             <button
               data-testid="login-submit-button"
               type="submit"
-              onClick={ createUser }
               disabled
               id="submit"
             >

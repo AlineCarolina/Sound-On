@@ -9,7 +9,7 @@ class Header extends React.Component {
 
     this.state = {
       user: '',
-      loading: true,
+      loading: false,
     };
   }
 
@@ -18,6 +18,7 @@ class Header extends React.Component {
   }
 
   async renderizaLoad() {
+    this.setState({ loading: true });
     const user = await getUser();
     if (user) {
       this.setState({

@@ -4,6 +4,8 @@ import Header from './header';
 import Loading from './pageLoading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
+// Consultei o repositório da Jéssica Grunewald para me ajudar  a resolver o requisito
+
 class Search extends React.Component {
   constructor(props) {
     super(props);

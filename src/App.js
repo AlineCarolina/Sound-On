@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Login from './pages/login';
+import Home from './pages/Home';
 import Search from './pages/search';
 import Album from './pages/album';
 import Favorites from './pages/favorites';
@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Route exact path="/" component={ Login } />
+        <Route exact path="/" component={ Home } />
         <Route path="/search" component={ Search } />
         <Route path="/album/:id" component={ Album } />
         <Route path="/favorites" component={ Favorites } />

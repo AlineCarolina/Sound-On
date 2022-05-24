@@ -1,7 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
-import Loading from './pageLoading';
+import Loading from '../pages/pageLoading';
+import soundon from '../images/soundon.gif';
+import './Login.css';
 
 class Login extends React.Component {
   constructor(props) {
@@ -18,8 +20,9 @@ class Login extends React.Component {
   }
 
   validaInput(event) {
+    const inputValue = event.target.value;
     this.setState({
-      textoInput: event.target.value,
+      textoInput: inputValue,
     });
     const { textoInput } = this.state;
     const caracteres = 2;
@@ -46,28 +49,33 @@ class Login extends React.Component {
     if (redirect) return <Redirect to="/search" />;
 
     return (
-      <div data-testid="page-login">
-        <form onSubmit={ this.botaoEnviar }>
-          <label htmlFor="login">
-            Nome
-            <input
-              data-testid="login-name-input"
-              type="text"
-              value={ textoInput }
-              onChange={ this.validaInput }
-              name="textoInput"
-            />
-            <button
-              data-testid="login-submit-button"
-              type="submit"
-              disabled
-              id="submit"
-            >
-              Entrar
-            </button>
-          </label>
-        </form>
-      </div>
+      <form onSubmit={ this.botaoEnviar }>
+        <label htmlFor="login" id="login-label">
+          <img src={ soundon } alt="soundon" id="image-sound" />
+          <input
+            className="login-input"
+            id="input-username"
+            placeholder=" Username or Email"
+            type="text"
+            value={ textoInput }
+            onChange={ this.validaInput }
+            name="textoInput"
+          />
+          <input
+            className="login-input"
+            id="input-passowrd"
+            type="password"
+            placeholder=" Password"
+          />
+          <button
+            type="submit"
+            disabled
+            id="submit"
+          >
+            LOGIN
+          </button>
+        </label>
+      </form>
     );
   }
 }

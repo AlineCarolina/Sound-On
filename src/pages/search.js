@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from './header';
+import Header from '../components/Header';
 import Loading from './pageLoading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 

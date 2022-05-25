@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getMusics from '../services/musicsAPI';
-import Header from './header';
+import Header from '../components/Header';
 import MusicCard from './MusicCard';
 
 // Consultei o repositório do DANIE CUSTODIO para me ajudar  a resolver o requisito

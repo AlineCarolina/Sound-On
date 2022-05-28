@@ -1,12 +1,33 @@
-body {
-    background-color: black;
+#pricipal-div {
+    background-image: url("../images/background.png");
+    width: 100%;
+    height: 100%;
+    padding: 5% 5% 5% 0;
+    padding-bottom: 40%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
 }
 
 #login-label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     justify-content: space-around;
+}
+
+label {
+    margin-top: 0;
+    border: #e100ff solid 1px;
+    width: 50%;
+    border-radius: 20px;
+    background-color: #000000;
 }
 
 .login-input {
@@ -19,7 +40,7 @@ body {
 }
 
 #image-sound {
-    width: 30%;
+    width: 40%;
     margin-top: 3%;
     margin-bottom: 7%;
 }
@@ -31,6 +52,7 @@ body {
     overflow: hidden;
     transition: 0.2s;
     margin-top: 40px;
+    margin-bottom: 20px;
     letter-spacing: 4px;
     background-color: black;
 }

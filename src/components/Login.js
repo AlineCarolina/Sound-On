@@ -49,33 +49,35 @@ class Login extends React.Component {
     if (redirect) return <Redirect to="/search" />;
 
     return (
-      <form onSubmit={ this.botaoEnviar }>
-        <label htmlFor="login" id="login-label">
-          <img src={ soundon } alt="soundon" id="image-sound" />
-          <input
-            className="login-input"
-            id="input-username"
-            placeholder=" Username or Email"
-            type="text"
-            value={ textoInput }
-            onChange={ this.validaInput }
-            name="textoInput"
-          />
-          <input
-            className="login-input"
-            id="input-passowrd"
-            type="password"
-            placeholder=" Password"
-          />
-          <button
-            type="submit"
-            disabled
-            id="submit"
-          >
-            LOGIN
-          </button>
-        </label>
-      </form>
+      <div id="pricipal-div">
+        <form onSubmit={ this.botaoEnviar } id="pricipal-form">
+          <label htmlFor="login" id="login-label">
+            <img src={ soundon } alt="soundon" id="image-sound" />
+            <input
+              className="login-input"
+              id="input-username"
+              placeholder=" Username or Email"
+              type="text"
+              value={ textoInput }
+              onChange={ this.validaInput }
+              name="textoInput"
+            />
+            <input
+              className="login-input"
+              id="input-passowrd"
+              type="password"
+              placeholder=" Password"
+            />
+            <button
+              type="submit"
+              disabled
+              id="submit"
+            >
+              LOGIN
+            </button>
+          </label>
+        </form>
+      </div>
     );
   }
 }

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 import Loading from '../pages/PageLoading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
-import phone from '../images/phone.png';
 import '../styles/InputSearch.css';
 
 class InputSearch extends React.Component {
@@ -45,13 +44,12 @@ class InputSearch extends React.Component {
     const MIN_CHARACTERS = 2;
 
     return (
-      <div>
+      <div id="pricipal-div">
         <Header />
         { loading
           ? <Loading />
           : (
             <form id="form-search">
-              <img src={ phone } alt="phone" id="phone-photo" />
               <p id="p-form">Search by song, album or artist!</p>
               <input
                 id="input-search"

@@ -1,9 +1,17 @@
 header {
     display: flex;
     justify-content: space-between;
+    height: 80px;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
-    align-items: center;
     padding: 1%;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    width: 60%;
 }
 
 p {
@@ -11,9 +19,26 @@ p {
 }
 
 img {
-    width: 100px;
+    float: left;
+    width: 130px;
 }
 
 div {
     align-self: flex-end;
+}
+
+header a {
+    color: rgb(255, 75, 195);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+header a:hover {
+    background-color: rgb(255, 75, 195);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(255, 75, 195),
+                0 0 25px rgb(255, 75, 195),
+                0 0 50px rgb(255, 75, 195),
+                0 0 100px rgb(255, 75, 195);
+    color: black;
 }

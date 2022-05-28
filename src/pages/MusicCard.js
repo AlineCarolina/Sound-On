@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Loading from './pageLoading';
+import Loading from './PageLoading';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 // consulta : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number
 // https://pt.stackoverflow.com/questions/29014/qual-o-sentido-de-usar-dupla-nega%C3%A7%C3%A3o-em-javascript

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Loading from './pageLoading';
+import Header from './Header';
+import Loading from '../pages/PageLoading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import phone from '../images/phone.png';
+import '../styles/InputSearch.css';
 
-// Consultei o repositório da Jéssica Grunewald para me ajudar  a resolver o requisito
-
-class Search extends React.Component {
+class InputSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,15 +45,16 @@ class Search extends React.Component {
     const MIN_CHARACTERS = 2;
 
     return (
-      <div data-testid="page-search">
+      <div>
         <Header />
-
         { loading
           ? <Loading />
           : (
-            <form>
+            <form id="form-search">
+              <img src={ phone } alt="phone" id="phone-photo" />
+              <p id="p-form">Search by song, album or artist!</p>
               <input
-                data-testid="search-artist-input"
+                id="input-search"
                 name="inputText"
                 value={ inputText }
                 type="text"
@@ -94,4 +95,4 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+export default InputSearch;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
-import Loading from '../pages/pageLoading';
+import Loading from '../pages/PageLoading';
 import soundon from '../images/soundon.gif';
 import '../styles/Login.css';
 

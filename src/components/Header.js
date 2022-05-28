@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
-import Loading from '../pages/pageLoading';
+import Loading from '../pages/PageLoading';
 import soundon from '../images/soundon.gif';
 import '../styles/Header.css';
 
@@ -42,10 +42,10 @@ class Header extends React.Component {
           <p>
             { `Welcome, ${user.name}` }
           </p>
+          <Link to="/search"> Search </Link>
+          <Link to="/favorites"> Favorites </Link>
+          <Link to="/profile"> Profile </Link>
         </section>
-        <Link to="/search"> Search </Link>
-        <Link to="/favorites"> Favorites </Link>
-        <Link to="/profile"> Profile </Link>
       </header>
     );
   }

@@ -44,7 +44,7 @@ class InputSearch extends React.Component {
     const MIN_CHARACTERS = 2;
 
     return (
-      <div id="pricipal-div">
+      <div id="search-div">
         <Header />
         { loading
           ? <Loading />

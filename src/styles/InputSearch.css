@@ -1,9 +1,12 @@
+#search-div {
+    background-color: #000000;
+}
+
 #form-search {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #000000;
 }
 
 #input-search {
@@ -25,7 +28,6 @@
 
 #p-form {
     margin-top: 15%;
-    border-radius: 35%;
     padding: 2%;
     background: #03e9f4;
     margin-top: 5px;

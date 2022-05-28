@@ -2,8 +2,9 @@
     background-image: url("../images/background.png");
     width: 100%;
     height: 100%;
+    margin: 0;
     padding: 5% 5% 5% 0;
-    padding-bottom: 40%;
+    padding-bottom: 600px;
 }
 
 form {
@@ -11,7 +12,7 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
 #login-label {
@@ -25,14 +26,15 @@ form {
 label {
     margin-top: 0;
     border: #e100ff solid 1px;
-    width: 50%;
+    width: 40%;
+    padding: 1%;
     border-radius: 20px;
     background-color: #000000;
 }
 
 .login-input {
-    width: 50%;
-    height: 30px;
+    width: 60%;
+    height: 10%;
     border-radius: 50px;
     font-size: 16px;
     margin-bottom: 5%;
@@ -51,7 +53,7 @@ label {
     font-size: 16px;
     overflow: hidden;
     transition: 0.2s;
-    margin-top: 40px;
+    margin-top: 5%;
     margin-bottom: 20px;
     letter-spacing: 4px;
     background-color: black;

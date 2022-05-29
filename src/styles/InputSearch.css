@@ -1,5 +1,6 @@
 #search-div {
     background-color: #000000;
+    margin: 0;
 }
 
 #form-search {
@@ -21,16 +22,8 @@
     outline: none;
 }
 
-#phone-photo {
-    margin-top: 5px;
-    width: 30%;
-}
-
 #p-form {
-    margin-top: 15%;
-    padding: 2%;
     background: #03e9f4;
-    margin-top: 5px;
     font-size: 16px;
     color: #000000;
     box-shadow: 0 0 5px #03e9f4, 

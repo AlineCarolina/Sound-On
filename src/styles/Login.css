@@ -7,6 +7,36 @@
     max-width: 1200px;
 }
 
+@media screen and (max-width: 970px) {
+    #pricipal-div {
+        padding-top: 20%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #pricipal-div {
+        padding-top: 35%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #pricipal-div {
+        padding-top: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #pricipal-div {
+        padding-top: 50%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #pricipal-div {
+        padding-top: 70%;
+    }
+}
+
 #pricipal-form {
     display: flex;
     flex-direction: column;

@@ -56,7 +56,7 @@ class Login extends React.Component {
             <input
               className="login-input"
               id="input-username"
-              placeholder=" Username or Email"
+              placeholder=" Username"
               type="text"
               value={ textoInput }
               onChange={ this.validaInput }

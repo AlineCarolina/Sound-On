@@ -1,16 +1,23 @@
 header {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     background-color: #000000;
+    margin-bottom: 5px;
 }
 
-section {
+#section-img-and-welcome {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    padding: 1%;
-    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+#section-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
     width: 60%;
 }
@@ -20,23 +27,21 @@ p {
 }
 
 img {
-    float: left;
-    width: 130px;
+    width: 90px;
 }
 
-div {
-    align-self: flex-end;
-}
 
 header a {
     color: rgb(255, 75, 195);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
+    padding: 5px;
+    
 }
 
 header a:hover {
     background-color: rgb(255, 75, 195);
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 0 5px rgb(255, 75, 195),
                 0 0 25px rgb(255, 75, 195),
                 0 0 50px rgb(255, 75, 195),

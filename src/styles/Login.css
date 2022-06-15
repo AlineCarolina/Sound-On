@@ -24,6 +24,7 @@
     font-size: 16px;
     margin-bottom: 10px;
     background-color: #000000;
+    color: white;
 }
 
 #image-sound {
@@ -62,7 +63,13 @@
 
 @media screen and (max-width: 820px) {
     #pricipal-div {
-        padding-top: 35%;
+        padding-top: 25%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #pricipal-div {
+        padding-top: 30%;
     }
 }
 

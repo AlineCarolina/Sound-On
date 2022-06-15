@@ -4,8 +4,6 @@ import getMusics from '../services/musicsAPI';
 import Header from '../components/Header';
 import MusicCard from './MusicCard';
 
-// Consultei o repositório do DANIE CUSTODIO para me ajudar  a resolver o requisito
-
 class Album extends React.Component {
   constructor() {
     super();

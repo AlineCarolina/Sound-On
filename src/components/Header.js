@@ -37,14 +37,14 @@ class Header extends React.Component {
 
     return (
       <header>
-        <img src={ soundon } alt="soundon" />
-        <section>
-          <p>
-            { `Welcome, ${user.name}` }
-          </p>
-          <Link to="/search"> Search </Link>
-          <Link to="/favorites"> Favorites </Link>
-          <Link to="/profile"> Profile </Link>
+        <section id="section-img-and-welcome">
+          <img src={ soundon } alt="soundon" />
+          <p>{ `Welcome, ${user.name}` }</p>
+        </section>
+        <section id="section-links">
+          <Link to="/search"> SEARCH </Link>
+          <Link to="/favorites"> FAVORITES </Link>
+          <Link to="/profile"> PROFILE </Link>
         </section>
       </header>
     );

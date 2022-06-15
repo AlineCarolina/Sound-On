@@ -25,7 +25,7 @@ class Login extends React.Component {
       textoInput: inputValue,
     });
     const { textoInput } = this.state;
-    const caracteres = 2;
+    const caracteres = 3;
     if (textoInput.length === caracteres) {
       document.getElementById('submit').disabled = false;
     }

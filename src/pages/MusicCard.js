@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loading from './PageLoading';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
-// consulta : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number
-// https://pt.stackoverflow.com/questions/29014/qual-o-sentido-de-usar-dupla-nega%C3%A7%C3%A3o-em-javascript
+import '../styles/MusicCard.css';
+
 class MusicCard extends Component {
   constructor() {
     super();
@@ -15,7 +15,7 @@ class MusicCard extends Component {
 
   async componentDidUpdate() {
     await getFavoriteSongs().then((favoriteSongs) => {
-      this.setState({ favoriteSongs }); // Aqui o array é alimentado com as música favoritas
+      this.setState({ favoriteSongs });
     });
   }
 
@@ -47,30 +47,26 @@ class MusicCard extends Component {
     const { loading, favoriteSongs } = this.state;
     if (loading) { return <Loading />; }
     return (
-      <section>
+      <section id="section-music-card">
         {songs.map(({ trackName, previewUrl, trackId }) => (
           <>
-            <div key={ trackId }>
-              <h3>{trackName}</h3>
-              <audio data-testid="audio-component" src={ previewUrl } controls>
+            <div key={ trackId } id="player-details">
+              <h3 id="h3-music-title">{trackName}</h3>
+              <audio id="audio-component" src={ previewUrl } controls>
                 <track kind="captions" />
                 O seu navegador não suporta o elemento
                 {' '}
-                <code>audio</code>
-                .
               </audio>
             </div>
             <div>
               <label
                 htmlFor={ trackId }
               >
-                Favorita
+                💜
                 <input
                   checked={ !!favoriteSongs.find((favoriteSong) => (
-                    // Com uma negação(!) só em favoriteSongs o valor de checked só fica em false
                     favoriteSong.trackId === trackId)) }
                   id={ trackId }
-                  data-testid={ `checkbox-music-${trackId}` }
                   type="checkbox"
                   name="favorite"
                   onChange={ this.handleChange }

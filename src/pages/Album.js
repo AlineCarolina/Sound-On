@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import getMusics from '../services/musicsAPI';
 import Header from '../components/Header';
 import MusicCard from './MusicCard';
+import '../styles/Album.css';
 
 class Album extends React.Component {
   constructor() {
@@ -31,14 +32,18 @@ class Album extends React.Component {
     return (
       <section>
         <Header />
-        <div data-testid="page-album">
-          <h2 data-testid="artist-name">{artistName}</h2>
-          <img src={ artworkUrl100 } alt={ collectionName } />
-          <h2 data-testid="album-name">{collectionName}</h2>
-        </div>
-        <div>
-          <MusicCard songs={ musicas } />
-        </div>
+        <section id="section-music-page">
+          <div id="page-album">
+            <div id="album-details">
+              <img src={ artworkUrl100 } alt={ collectionName } id="image-album" />
+              <h2 id="artist-name">{artistName}</h2>
+              <h2 id="album-name">{collectionName}</h2>
+            </div>
+            <div id="div-music-card">
+              <MusicCard songs={ musicas } />
+            </div>
+          </div>
+        </section>
       </section>
     );
   }

@@ -1,0 +1,42 @@
+#section-music-page {
+    background-image: url("../images/background.png");
+    background-size: cover;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#page-album {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 3%;
+    border: 1px solid #03e9f4;
+    border-radius: 20px;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    height: 80vh;
+    background-color: #000000;
+}
+
+#album-details {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#div-music-card {
+    width: 50%;
+    padding: auto;
+}
+
+#image-album {
+    border-radius: 20px;
+    width: 60%;
+}
+
+h2 {
+    color: azure;
+    font-size: 15px;
+}

@@ -6,8 +6,8 @@ import soundon from '../images/soundon.gif';
 import '../styles/Header.css';
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       user: '',

@@ -7,8 +7,8 @@ import disco from '../images/disco.png';
 import '../styles/Search.css';
 
 class Search extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       inputText: '',
       loading: false,

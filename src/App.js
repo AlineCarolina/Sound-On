@@ -4,8 +4,8 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import Album from './pages/Album';
 import Favorites from './pages/Favorites';
-import Profile from './pages/profile';
-import ProfileEdit from './pages/profileEdit';
+import Profile from './pages/Profile';
+import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
 import './index.css';
 
@@ -18,7 +18,7 @@ class App extends React.Component {
         <Route path="/album/:id" component={ Album } />
         <Route path="/favorites" component={ Favorites } />
         <Route path="/profile" component={ Profile } />
-        <Route path="/profile/edit" component={ ProfileEdit } />
+        <Route exact path="/edit/profile" component={ ProfileEdit } />
         <Route exact path="*" component={ NotFound } />
       </BrowserRouter>
     );

@@ -22,9 +22,8 @@ class Favorites extends React.Component {
     });
   }
 
-  render() {
-    const { loading, favorite } = this.state;
-    if (loading) { return <Loading />; }
+  favoriteSongs() {
+    const { favorite } = this.state;
     return (
       <div id="page-favorites">
         <Header />
@@ -39,6 +38,16 @@ class Favorites extends React.Component {
             </div>
           </div>
         </div>
+      </div>
+    );
+  }
+
+  render() {
+    const { loading } = this.state;
+
+    return (
+      <div>
+        { loading ? <Loading /> : this.favoriteSongs() }
       </div>
     );
   }

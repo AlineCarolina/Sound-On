@@ -1,6 +1,9 @@
 #section-music-card {
     height: 80vh;
     overflow-y: scroll;
+    background-color: #000000;
+    border-radius: 20px;
+    border: #03e9f4;
 }
 
 #player-details {

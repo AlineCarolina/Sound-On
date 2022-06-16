@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import Loading from './PageLoading';
-import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import MusicCard from './MusicCard';
+import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../styles/Favorites.css';
 
 class Favorites extends React.Component {
   constructor() {
@@ -13,7 +14,7 @@ class Favorites extends React.Component {
     };
   }
 
-  componentDidUpdate() {
+  componentDidMount() {
     getFavoriteSongs().then((favoriteSongs) => {
       const favorite = favoriteSongs.slice(1);
       this.setState({ favorite });
@@ -26,7 +27,9 @@ class Favorites extends React.Component {
     return (
       <div id="page-favorites">
         <Header />
-        <MusicCard songs={ favorite } />
+        <div className="favorites-container">
+          <MusicCard songs={ favorite } />
+        </div>
       </div>
     );
   }

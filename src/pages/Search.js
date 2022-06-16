@@ -87,7 +87,7 @@ class Search extends React.Component {
         <Header />
         <form id="form-search">
           <img src={ disco } alt="disco" id="disco-img" />
-          <p id="p-form">Search by song, album or artist!</p>
+          <p id="p-form">Search by artist!</p>
           <div id="div-input">
             <input
               id="input-search"

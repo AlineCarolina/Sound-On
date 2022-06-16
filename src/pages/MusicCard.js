@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loading from './PageLoading';
-import { addSong, removeSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import '../styles/MusicCard.css';
 
 class MusicCard extends Component {
@@ -11,6 +11,12 @@ class MusicCard extends Component {
       loading: false,
       favoriteSongs: [],
     };
+  }
+
+  async componentDidUpdate() {
+    await getFavoriteSongs().then((favoriteSongs) => {
+      this.setState({ favoriteSongs });
+    });
   }
 
   handleChange = async (event) => {

@@ -51,7 +51,7 @@ class MusicCard extends Component {
         {songs.map(({ trackName, previewUrl, trackId }) => (
           <>
             <div key={ trackId } id="player-details">
-              <h3 id="h3-music-title">{trackName}</h3>
+              <p id="h3-music-title">{trackName}</p>
               <audio id="audio-component" src={ previewUrl } controls>
                 <track kind="captions" />
                 O seu navegador não suporta o elemento

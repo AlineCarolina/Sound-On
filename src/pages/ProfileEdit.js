@@ -69,7 +69,7 @@ class ProfileEdit extends React.Component {
       <div>
         <Header />
         <form id="form-profile-edit">
-          <label htmlFor="name">
+          <label htmlFor="name" className="label-form">
             Name
             <input
               type="text"
@@ -77,9 +77,10 @@ class ProfileEdit extends React.Component {
               name="name"
               placeholder={ user.name }
               onChange={ this.handleInput }
+              className="input-profile-edit"
             />
           </label>
-          <label htmlFor="email">
+          <label htmlFor="email" className="label-form">
             Email
             <input
               type="text"
@@ -87,9 +88,10 @@ class ProfileEdit extends React.Component {
               name="email"
               placeholder={ user.email }
               onChange={ this.handleInput }
+              className="input-profile-edit"
             />
           </label>
-          <label htmlFor="description">
+          <label htmlFor="description" className="label-form">
             Description
             <textarea
               id="description"
@@ -98,7 +100,7 @@ class ProfileEdit extends React.Component {
               onChange={ this.handleInput }
             />
           </label>
-          <label htmlFor="img">
+          <label htmlFor="img" className="label-form">
             Image
             <input
               type="text"
@@ -106,6 +108,7 @@ class ProfileEdit extends React.Component {
               name="img"
               placeholder={ user.img }
               onChange={ this.handleInput }
+              className="input-profile-edit"
             />
           </label>
           <button

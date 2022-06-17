@@ -1,5 +1,5 @@
 {
-  "name": "spotifyclone",
+  "name": "soundonmusics",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,7 +46,8 @@
     "prop-types": "^15.7.2",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "4.1.0"
+    "stylelint-order": "4.1.0",
+    "ejs": ">=3.1.7"
   },
   "overrides": {
     "react-error-overlay": "6.0.9"

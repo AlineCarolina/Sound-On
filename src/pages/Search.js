@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import Loading from './PageLoading';
+import Loading from '../components/PageLoading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import disco from '../images/disco.png';
 import '../styles/Search.css';

@@ -19,6 +19,12 @@
     padding: 5%;
 }
 
+#image-sound {
+    width: 30%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .login-input {
     width: 40%;
     height: 10%;
@@ -27,12 +33,6 @@
     margin-bottom: 10px;
     background-color: #000000;
     color: white;
-}
-
-#image-sound {
-    width: 30%;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 #submit {

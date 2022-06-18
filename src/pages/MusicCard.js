@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Loading from './PageLoading';
+import Loading from '../components/PageLoading';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import '../styles/MusicCard.css';
 

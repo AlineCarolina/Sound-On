@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Loading from './PageLoading';
+import Loading from '../components/PageLoading';
 import MusicCard from './MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import listen from '../images/listen.png';

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Loading from '../components/PageLoading';
+import { Header, Loading } from '../components';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import disco from '../images/disco.png';
 import '../styles/Search.css';
@@ -9,40 +8,27 @@ import '../styles/Search.css';
 class Search extends React.Component {
   constructor() {
     super();
+
     this.state = {
       inputText: '',
       loading: false,
       album: [],
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleChange({ target }) {
+  handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
   }
 
-  async handleClick() {
+  handleClick = async () => {
+    this.setState({ loading: true });
     const { inputText } = this.state;
-    const artist = inputText;
-
-    this.setState({
-      loading: true,
-      artist,
-    });
-
-    const album = await searchAlbumsAPI(artist);
-
-    this.setState({
-      loading: false,
-      inputText: '',
-      album,
-    });
+    const album = await searchAlbumsAPI({ artistName: inputText });
+    this.setState({ loading: false, inputText: '', album });
   }
 
   render() {
     const { inputText, loading, artist, album } = this.state;
-    const MIN_CHARACTERS = 2;
     if (loading) return <Loading />;
     if (album.length > 0) {
       return (
@@ -61,7 +47,7 @@ class Search extends React.Component {
               <button
                 id="search-artist-button-min"
                 type="button"
-                disabled={ inputText.length < MIN_CHARACTERS }
+                disabled={ inputText.length < 2 }
                 onClick={ this.handleClick }
               >
                 SEARCH
@@ -99,7 +85,7 @@ class Search extends React.Component {
             <button
               id="search-artist-button"
               type="button"
-              disabled={ inputText.length < MIN_CHARACTERS }
+              disabled={ inputText.length < 2 }
               onClick={ this.handleClick }
             >
               SEARCH

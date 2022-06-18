@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
-import Loading from '../pages/PageLoading';
+import Loading from './PageLoading';
 import soundon from '../images/soundon.gif';
 import '../styles/Header.css';
 

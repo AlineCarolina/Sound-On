@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Header from '../components/Header';
-import Loading from './PageLoading';
+import Loading from '../components/PageLoading';
 import '../styles/ProfileEdit.css';
 import { getUser, updateUser } from '../services/userAPI';
 

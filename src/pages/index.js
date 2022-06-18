@@ -3,7 +3,7 @@ import Favorites from './Favorites';
 import Home from './Home';
 import MusicCard from './MusicCard';
 import NotFound from './NotFound';
-import PageLoading from './PageLoading';
+import PageLoading from '../components/PageLoading';
 import Profile from './Profile';
 import ProfileEdit from './ProfileEdit';
 import Search from './Search';

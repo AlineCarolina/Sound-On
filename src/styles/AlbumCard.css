@@ -1,0 +1,44 @@
+#div-card {
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+#section-card {
+    border: #03e9f4 1px solid;
+    width: 25%;
+    margin-bottom: 3%;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#section-card:hover {
+    background-color: #000000;
+    border-radius: 20px;
+    border-style: double;
+    box-shadow: 0 0 5px #03e9f4, 
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+    color: black;
+}
+
+#link-card {
+    text-decoration: none;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#p-album {
+    font-size: 15px;
+    color: #03e9f4;
+}
+
+#album-img {
+    width: 60%;
+    border-radius: 20px;
+}

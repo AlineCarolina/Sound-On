@@ -1,18 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 import { Header, Loading } from '../components';
-import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import AlbumCard from '../components/AlbumCard';
 import disco from '../images/disco.png';
+import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import '../styles/Search.css';
 
-class Search extends React.Component {
+class Search extends Component {
   constructor() {
     super();
 
     this.state = {
-      inputText: '',
       loading: false,
       album: [],
+      inputText: '',
     };
   }
 
@@ -23,51 +23,15 @@ class Search extends React.Component {
   handleClick = async () => {
     this.setState({ loading: true });
     const { inputText } = this.state;
-    const album = await searchAlbumsAPI({ artistName: inputText });
+    const artist = inputText;
+    this.setState({ artist });
+    const album = await searchAlbumsAPI(artist);
     this.setState({ loading: false, inputText: '', album });
   }
 
   render() {
-    const { inputText, loading, artist, album } = this.state;
+    const { loading, album, inputText, artist } = this.state;
     if (loading) return <Loading />;
-    if (album.length > 0) {
-      return (
-        <div id="div-for-albuns">
-          <Header />
-          <div id="div-input-min">
-            <h3 id="h3-text">{`Results for ${artist}`}</h3>
-            <div id="input-min">
-              <input
-                id="input-search-min"
-                name="inputText"
-                value={ inputText }
-                type="text"
-                onChange={ this.handleChange }
-              />
-              <button
-                id="search-artist-button-min"
-                type="button"
-                disabled={ inputText.length < 2 }
-                onClick={ this.handleClick }
-              >
-                SEARCH
-              </button>
-            </div>
-          </div>
-          <div id="div-card">
-            {album
-              .map(({ collectionName, collectionId, artworkUrl100 }) => (
-                <section key={ collectionId } id="section-card">
-                  <Link to={ `/album/${collectionId}` } id="link-card">
-                    <p id="p-album">{collectionName}</p>
-                    <img src={ artworkUrl100 } alt="img" id="album-img" />
-                  </Link>
-                </section>))}
-          </div>
-        </div>
-      );
-    }
-
     return (
       <div id="search-div">
         <Header />
@@ -92,6 +56,8 @@ class Search extends React.Component {
             </button>
           </div>
         </form>
+        { artist && <p id="p-artist">{`Results for ${artist}`}</p> }
+        { album ? <AlbumCard albuns={ album } /> : this.render() }
       </div>
     );
   }

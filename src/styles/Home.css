@@ -20,7 +20,7 @@
 }
 
 #image-sound {
-    width: 30%;
+    width: 40%;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -33,6 +33,7 @@
     margin-bottom: 10px;
     background-color: #000000;
     color: white;
+    border: #e100ff 1px solid;
 }
 
 #submit {

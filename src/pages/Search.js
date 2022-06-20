@@ -38,25 +38,23 @@ class Search extends Component {
         <form id="form-search">
           <img src={ disco } alt="disco" id="disco-img" />
           <p id="p-form">Search by artist!</p>
-          <div id="div-input">
-            <input
-              id="input-search"
-              name="inputText"
-              value={ inputText }
-              type="text"
-              onChange={ this.handleChange }
-            />
-            <button
-              id="search-artist-button"
-              type="button"
-              disabled={ inputText.length < 2 }
-              onClick={ this.handleClick }
-            >
-              SEARCH
-            </button>
-          </div>
+          <input
+            id="input-search"
+            name="inputText"
+            value={ inputText }
+            type="text"
+            onChange={ this.handleChange }
+          />
+          <button
+            id="search-artist-button"
+            type="button"
+            disabled={ inputText.length < 2 }
+            onClick={ this.handleClick }
+          >
+            SEARCH
+          </button>
         </form>
-        { artist && <p id="p-artist">{`Results for ${artist}`}</p> }
+        { artist && <h2 id="h2-artist">{`Results for ${artist}`}</h2> }
         { album ? <AlbumCard albuns={ album } /> : this.render() }
       </div>
     );

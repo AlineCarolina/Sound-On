@@ -1,48 +1,29 @@
-.favorites-container {
-    background-image: url("../images/background.png");
-    background-size: cover;
-    margin: 0 auto;
-    padding: 5%;
-}
-
 .favorites-div {
-    border: 1px solid #03e9f4;
-    border-radius: 20px;
-    height: 80vh;
-    background-color: #000000;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    padding: 5%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5%;
+    margin-top: 2%;
+    border: 1px solid #ff4bc3;
+    border-radius: 20px;
+    padding: 3%;
+    height: fit-content;
 }
 
 #div-img-listen {
+    margin: 0;
+    width: 40%;
+    height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-    width: 60%;
-}
-
-#div-music-cards {
-    width: 50%;
+    margin-bottom: 5%;
 }
 
 #img-listen {
-    animation-duration: 3s;
-    animation-name: maxmin;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes maxmin {
-    from {
-        width: 40%;
-    }
-    to {
-        width: 60%;
-    }
+    width: 80%;
 }
 
 #h2-position {
@@ -51,4 +32,11 @@
     border: #03e9f4 solid 1px;
     border-radius: 20px;
     padding: 5px;
+} 
+
+#div-music-cards {
+    border: 1px solid #ff4bc3;
+    padding: 5%;
+    border-radius: 20px;
+    margin: 1px;
 }

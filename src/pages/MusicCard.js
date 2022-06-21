@@ -79,6 +79,7 @@ class MusicCard extends Component {
     );
   }
 }
+
 MusicCard.propTypes = {
   songs: PropTypes.arrayOf({
     trackName: PropTypes.string.isRequired,

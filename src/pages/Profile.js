@@ -37,7 +37,6 @@ class Profile extends React.Component {
     return (
       <div id="page-profile">
         <Header />
-        <div id="container-profile-infos">
           <div id="div-profile-infos">
             <div id="div-img-button">
               <div id="div-border-img">
@@ -55,7 +54,6 @@ class Profile extends React.Component {
             </div>
           </div>
         </div>
-      </div>
     );
   }
 }

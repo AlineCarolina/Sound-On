@@ -8,6 +8,7 @@ import '../styles/Album.css';
 class Album extends React.Component {
   constructor() {
     super();
+
     this.state = {
       musicas: [],
       info: {},
@@ -32,18 +33,15 @@ class Album extends React.Component {
     return (
       <section>
         <Header />
-        <section id="section-music-page">
-          <div id="page-album">
-            <div id="album-details">
-              <img src={ artworkUrl100 } alt={ collectionName } id="image-album" />
-              <h2 id="artist-name">{artistName}</h2>
-              <h2 id="album-name">{collectionName}</h2>
-            </div>
-            <div id="div-music-card">
-              <MusicCard songs={ musicas } />
-            </div>
+        <div id="page-album">
+          <div id="album-details">
+            <p id="artist-name">{ `${artistName} - ${collectionName}` }</p>
+            <img src={ artworkUrl100 } alt={ collectionName } id="image-album" />
           </div>
-        </section>
+          <div id="div-music-card">
+            <MusicCard songs={ musicas } />
+          </div>
+        </div>
       </section>
     );
   }
@@ -57,4 +55,5 @@ Album.propTypes = {
   }).isRequired,
 
 };
+
 export default Album;

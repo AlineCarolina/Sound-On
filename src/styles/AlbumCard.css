@@ -7,7 +7,7 @@
 }
 
 #section-card {
-    border: #e100ff 1px solid;
+    border: #ff4bc3 1px solid;
     width: 25%;
     margin-bottom: 3%;
     border-radius: 20px;
@@ -33,7 +33,7 @@
 
 #p-album {
     font-size: 15px;
-    color: #e100ff;
+    color: #ff4bc3;
 }
 
 #album-img {

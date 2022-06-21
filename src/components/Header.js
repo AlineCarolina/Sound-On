@@ -38,7 +38,7 @@ class Header extends React.Component {
     return (
       <header>
         <section id="section-img-and-welcome">
-          <img src={ soundon } alt="soundon" />
+          <img src={ soundon } alt="soundon" id="soundon" />
           <p>{ `Welcome, ${user.name}` }</p>
         </section>
         <section id="section-links">

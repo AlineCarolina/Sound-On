@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Loading from '../components/PageLoading';
 import MusicCard from './MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
-import listen from '../images/listen.png';
+import disco from '../images/disco.png';
 import '../styles/Favorites.css';
 
 class Favorites extends React.Component {
@@ -29,11 +29,13 @@ class Favorites extends React.Component {
         <Header />
         <div className="favorites-div">
           <div id="div-img-listen">
-            <h2 id="h2-position">Your favorite songs</h2>
-            <img src={ listen } alt="listen" id="img-listen" />
+            <img src={ disco } alt="disco" id="img-disco" />
           </div>
-          <div id="div-music-cards">
-            <MusicCard songs={ favorite } />
+          <div>
+            <h2 id="h2-position">Your favorite songs</h2>
+            <div id="div-music-cards">
+              <MusicCard songs={ favorite } />
+            </div>
           </div>
         </div>
       </div>

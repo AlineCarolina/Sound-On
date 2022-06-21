@@ -14,7 +14,7 @@ Além das citadas a cima também foram utilizadas para o desenvolvimento da apli
   * JavaScript
   * HTML5
   * CSS3
-  * Canvas para o design
+  * Canva para o design
   * Vercel para o Deploy
 
 ---

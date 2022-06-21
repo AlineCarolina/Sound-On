@@ -25,17 +25,15 @@ class Favorites extends React.Component {
   favoriteSongs() {
     const { favorite } = this.state;
     return (
-      <div id="page-favorites">
+      <div>
         <Header />
         <div className="favorites-div">
           <div id="div-img-listen">
+            <h2 id="h2-position">🤍 Your favorite songs 🤍</h2>
             <img src={ disco } alt="disco" id="img-disco" />
           </div>
-          <div>
-            <h2 id="h2-position">Your favorite songs</h2>
-            <div id="div-music-cards">
-              <MusicCard songs={ favorite } />
-            </div>
+          <div id="div-music-cards">
+            <MusicCard songs={ favorite } />
           </div>
         </div>
       </div>

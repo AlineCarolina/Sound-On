@@ -16,14 +16,13 @@
     width: 40%;
     height: fit-content;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5%;
 }
 
 #img-disco {
-    width: 60%;
+    width: 90%;
     border-radius: 50%;
     animation: rotation 7s infinite linear;
 }
@@ -44,8 +43,20 @@
     border-radius: 20px;
     padding: 5%;
     letter-spacing: 2px;
+    margin-bottom: 35px;
     text-align: center;
-} 
+    animation: minmax 1s infinite linear;
+    animation-direction: alternate;
+}
+
+@keyframes minmax {
+    to {
+        box-shadow: 0 0 2px #ff4bc3, 
+                0 0 10px #ff4bc3,
+                0 0 20px #ff4bc3,
+                0 0 40px #ff4bc3;
+    }
+}
 
 #div-music-cards {
     border: 1px solid #ff4bc3;
